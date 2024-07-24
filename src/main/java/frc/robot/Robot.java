@@ -52,9 +52,7 @@ public class Robot extends TimedRobot {
    * SmartDashboard integrated updating.
    */
   @Override
-  public void robotPeriodic() {
-    my_robot.tankDrive(controller.getLeftY(), controller.getRightY());
-  }
+  public void robotPeriodic() {}
 
   @Override
   public void autonomousInit() {}
@@ -69,7 +67,9 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    my_robot.tankDrive(controller.getLeftY(), controller.getRightY());
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override
